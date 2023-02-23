@@ -6,7 +6,7 @@ RUN apt update \
     && docker-php-ext-install -j$(nproc) gmp \
     && docker-php-ext-install pdo_sqlite \
     && a2enmod remoteip \
-    && git clone https://github.com/gmazoyer/looking-glass.git --branch main --single-branch /var/www/html/ \
+    && git clone https://github.com/gregoireneve/looking-glass.git --branch main --single-branch /var/www/html/ \
     && apt purge -y --auto-remove git \
     && rm -rf /var/lib/apt/lists/* \
     && mkdir -p /var/log/ \
