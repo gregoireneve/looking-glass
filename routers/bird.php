@@ -36,7 +36,7 @@ final class Bird extends UNIX {
       $cmd->add($this->get_bird_binary($ipv6_enabled));
 
       // Build the command to send to the binary
-      $cmd->add("'show route where bgp_path ~ [=", $parameter, '=]');
+      $cmd->add("'show route where bgp_path ~ [", $parameter, ']');
       if ($this->config['bgp_detail']) {
         $cmd->add('all');
       }
